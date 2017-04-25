@@ -1,63 +1,141 @@
-// windows
-function setup() { 
-   createCanvas(640, 480);
-    
-    noStroke();
-}
-function draw() {
-    background(255, 255, 242);
-    
-    var windowWidth = width/2; // window width
-    var windowHeight = height; // window height
-    
-    for ( var x = windowWidth/4; x < width; x+=windowWidth) {
-       for (var y = windowHeight/4; y < height; y+=windowHeight) {
-           
-           fill(14, 4, 46);
-           rect(x, y, windowWidth/2, windowHeight/2);
-           
-          noStroke();
-           rect(x, y, windowWidth/4, windowHeight/4);
-           rect(x, y+windowHeight/4, windowWidth/4, windowHeight/4);
-           rect(x+windowWidth/4, y, windowWidth/4, windowHeight/4);
-           rect(x+windowWidth/4, y+windowHeight/4, windowWidth/4, windowHeight/4);
-       
+function setup(){
+    createCanvas(640, 480);
+    background(220);
 
-           fill(92, 37, 105);
-           noStroke();
-          rect(x-windowWidth/4-windowWidth/3, y, windowWidth/12, windowHeight/4);
-          rect(x-windowWidth/4-windowWidth/3, y+windowHeight/4, windowWidth/12, windowHeight/4);
-           rect(x+windowWidth/4+windowWidth/4+windowWidth/4-windowWidth/3, y, windowWidth/12, windowHeight/4);
-           rect(x+windowWidth/4+windowWidth/4+windowWidth/4-windowWidth/3,y+windowHeight/4, windowWidth/12, windowHeight/4);
-           
-           //the smallest rect
-           fill(14, 9, 67);
-           rect(x-windowWidth/4-windowWidth/3, y, windowWidth/12, windowHeight/16 );
-           rect(x+windowWidth/4+windowWidth/4+windowWidth/4-windowWidth/3, y, windowWidth/12, windowHeight/16);
-           
-            fill(14, 9, 67);
-           rect(x, y, windowWidth/4, windowHeight/16);
-           
-           fill(0);
-           rect(x+windowWidth/4, y, windowWidth/6, windowHeight/16);
-           
-           fill(92, 37, 105);
-           arc(x, windowHeight/3.2, windowWidth/2.1, windowHeight/4+windowHeight/2.5, 0, HALF_PI);
-           
-           stroke(255, 212, 193);
-           strokeWeight(4);
-           line(x+windowWidth/4, y, x+windowWidth/4, y+windowHeight/2);
-           line(x, windowHeight/2, x+windowWidth/2, windowHeight/2);
-           
-           
-           
-           
-           
-           
-           
-           
-           
-        }
-    }
-        
+ //B
+    fill(232, 171, 232);
+    textSize(100);
+    text("B", 127, 180);
+    
+    //i
+    fill(59, 171, 232);
+    textSize(20);
+    text("碧", 200, 107);
+    noFill();
+    stroke(232, 171, 232);
+    strokeWeight(2);
+    ellipse(210, 100, 30, 30);
+    
+    
+    
+    var size = 20;
+    var _size = 50;
+    var sizeChange = 5;
+    var _sizeChange = 5;
+    
+    var xPos = 200;
+    var yPos =125;
+    
+    var outline = color(59, 171, 232);
+    var w = 2;
+    rect(200, 125, 20, 50);
+    stroke(outline);
+    strokeWeight(w);
+    
+    rect(xPos, yPos, size, _size);
+    size -= sizeChange;
+    _size -= _sizeChange;
+    
+    stroke(outline);
+    strokeWeight(w);
+    
+    rect(xPos, yPos, size, _size);
+    size -= sizeChange;
+    _size -= _sizeChange;
+    
+    stroke(outline);
+    strokeWeight(w);
+    
+    rect(xPos, yPos, size, _size);
+    size -= sizeChange;
+    _size -= _sizeChange;
+    stroke(outline);
+    strokeWeight(w);
+    
+    rect(xPos, yPos, size, _size);
+    size -= sizeChange;
+    _size -= _sizeChange;
+    
+    //Mei
+    noFill();
+    stroke(232, 171, 232);
+    strokeWeight(2);
+    ellipse(240, 170, 30, 30);
+    noStroke();
+    fill(232, 171, 232);
+    rect(230, 190, 15, 30);
+    textSize(50);
+    fill(59, 171, 232);
+    text("Me", 160, 220);
+    textSize(20);
+    strokeWeight(1);
+    fill(59, 171, 232);
+    text("媚", 230, 177);
+    
+    
+    //Li
+    fill(232, 171, 232);
+    noStroke();
+    textSize(250);
+    text("L", 100, 250);
+
+
+    
 }
+
+function draw(){
+    push();
+    translate(width/3, height/3);
+    rotate(2*PI*frameCount/90);
+    strokeWeight(4);
+    stroke("yellow");
+    line(0, height/3, width/3, 0);
+    rotate(PI/16);
+    ellipse(100, 100, 40, 40);
+    pop();
+    
+    push();
+    translate(width/3, height/3);
+    rotate(PI/16*frameCount/30);
+    fill("green");
+    ellipse(55, 55, 5, 5);
+    pop();
+    
+    push();
+    translate(width/3, height/3);
+    rotate(PI/16*frameCount/30);
+    stroke("white");
+    fill(59, 171, 232);
+    textSize(20);
+    text("碧", 0, -80);
+    pop();
+    
+    push();
+    translate(width/3, height/3);
+    rotate(PI/16*frameCount/40);
+    stroke("white");
+    fill(59, 171, 232);
+    textSize(20);
+    text("媚", 0, -80);
+    pop();
+    
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
